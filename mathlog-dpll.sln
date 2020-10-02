@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "mathlog-dpll", "mathlog-dpll.fsproj", "{C12D8500-3CAA-43DF-80C8-1FB9E678EA61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C12D8500-3CAA-43DF-80C8-1FB9E678EA61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12D8500-3CAA-43DF-80C8-1FB9E678EA61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12D8500-3CAA-43DF-80C8-1FB9E678EA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12D8500-3CAA-43DF-80C8-1FB9E678EA61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

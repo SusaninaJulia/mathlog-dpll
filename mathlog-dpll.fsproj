@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>mathlog_dpll</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Include="DPLL.fs" />
+      <Compile Include="Main.fs" />
+    </ItemGroup>
+
+</Project>
