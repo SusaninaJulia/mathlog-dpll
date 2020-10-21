@@ -41,10 +41,6 @@ let TSEYTIN(f: Formula) =
 type Flag = 
     | SAT
     | UNSAT
-
-let EliminatePureLiteral(S: list<list<int>>, l : int) = 
-     List.filter (fun (el : list<int>) -> not (List.length(el) = 1 && el.[0] = l )) S
-     |> List.map (fun el -> List.filter (fun el2 -> el2 <> l) el) 
     
 let UnitPropagate(S: list<list<int>>, l : int) =
     List.filter (fun C -> not (List.exists ((=) l) C)) S
@@ -63,7 +59,7 @@ let rec DPLL (S: list<list<int>>, M : Set<int>) =
             else
                 let pvs = List.concat S1 |> Set.ofList
                 let pures = Set.filter (fun el -> not (Set.exists ((=) -el) pvs)) pvs 
-                let S2 = List.fold (fun S2 el -> EliminatePureLiteral(S2, el)) S1 (Set.toList pures) 
+                let S2 = List.fold (fun S2 el -> UnitPropagate(S2, el)) S1 (Set.toList pures) 
                 let M2 = Set.union M1 pures
                 if List.isEmpty S2
                 then (SAT, M2)
